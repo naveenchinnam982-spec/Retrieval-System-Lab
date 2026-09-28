@@ -1,0 +1,5 @@
+# Python dependencies for Retrieval System Lab
+# Note: The core package is designed with standard library (math, json, hashlib, re, urllib)
+# but also supports numpy and requests if available in external server environments.
+numpy>=1.20.0
+requests>=2.28.0

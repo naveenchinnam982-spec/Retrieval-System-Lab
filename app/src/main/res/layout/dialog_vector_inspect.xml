@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_inspect_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Embedding Vector Inspection"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/on_background_light" />
+
+    <TextView
+        android:id="@+id/tv_inspect_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Dimension: 384 • L2 Norm: 1.0000"
+        android:textSize="12sp"
+        android:textColor="@color/secondary" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/code_bg"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_inspect_vector_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[0.0821, -0.1452, ...]"
+            android:textColor="@color/code_text"
+            android:textSize="12sp"
+            android:typeface="monospace" />
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_inspect_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy Vector"
+            style="@style/Widget.Material3.Button.TextButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_inspect_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Close"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/primary" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+{
+  "name": "Retrieval Lab",
+  "description": "Document retrieval system using text chunking, embeddings, vector similarity search, and relevance evaluation",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

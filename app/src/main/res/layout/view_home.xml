@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Architecture Header Banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/outline_light"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/surface_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOCUMENT RETRIEVAL PIPELINE"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"
+                    android:textColor="@color/secondary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Vector Embedding &amp; Similarity System"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_background_light" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Demonstrates real document processing: text cleaning, sliding-window chunking, dense vector embeddings, persistent Room database vector indexing, and cosine similarity search."
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColor="@color/text_muted" />
+
+                <!-- Visual Pipeline Stage Chips -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_dashboard"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="1. Text Extract"
+                            android:textSize="11sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="4dp"
+                            android:text="→"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="2. Chunking"
+                            android:textSize="11sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="4dp"
+                            android:text="→"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="3. Embeddings"
+                            android:textSize="11sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="4dp"
+                            android:text="→"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="4. Vector Storage"
+                            android:textSize="11sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="4dp"
+                            android:text="→"
+                            android:textColor="@color/text_muted" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="5. Cosine Search"
+                            android:textSize="11sp"
+                            android:textColor="@color/secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- System Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/status_success_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_check"
+                    app:tint="@color/status_success"
+                    android:contentDescription="Status OK" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retrieval System Status: Active"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#065F46" />
+
+                    <TextView
+                        android:id="@+id/tv_home_engine_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dense Local Semantic Engine (384-dim, Real Vectors)"
+                        android:textSize="12sp"
+                        android:textColor="#047857" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Metrics Grid (Documents, Chunks, Dimension, Status) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <!-- Metric 1: Documents -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/outline_light"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/surface_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DOCUMENTS"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/text_muted" />
+
+                    <TextView
+                        android:id="@+id/tv_home_doc_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Metric 2: Chunks -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/outline_light"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/surface_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INDEXED CHUNKS"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/text_muted" />
+
+                    <TextView
+                        android:id="@+id/tv_home_chunk_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Section Title: Lab Operations -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="LAB OPERATIONS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_muted" />
+
+        <!-- 4 Primary Operation Buttons Required by Section 3 -->
+        <!-- 1. Add Document -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home_add_document"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Add Document"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/primary" />
+
+        <!-- 2. Documents Library -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home_documents"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Document Library"
+            app:icon="@drawable/ic_folder"
+            app:iconGravity="textStart"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.TonalButton" />
+
+        <!-- 3. Semantic Search -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home_search"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Semantic Search"
+            app:icon="@drawable/ic_search"
+            app:iconGravity="textStart"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <!-- 4. Test Retrieval -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home_test_retrieval"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Test Retrieval &amp; Evaluation"
+            app:icon="@drawable/ic_science"
+            app:iconGravity="textStart"
+            android:textSize="15sp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <!-- Quick 1-Click Load Benchmark Papers -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home_load_benchmarks"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="Load Benchmark Documents (4 Research Papers)"
+            app:icon="@drawable/ic_auto_stories"
+            app:iconGravity="textStart"
+            android:textSize="13sp"
+            app:cornerRadius="10dp"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:textColor="@color/secondary" />
+
+        <!-- Section: Example Queries -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="EXAMPLE RETRIEVAL QUERIES"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:textColor="@color/text_muted" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_sample_queries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_q1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is machine learning?" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_q2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What are the advantages of neural networks?" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_q3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explain the attention mechanism in transformers" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_q4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How does vector similarity retrieval work?" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
